@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap');
+
+*{
+    font-family: 'Snowburst One', cursive;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
