@@ -1,8 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&display=swap');
 
 *{
-    font-family: 'Snowburst One', cursive;
+    font-family: 'Butcherman', cursive;
     margin: 0;padding: 0;
     box-sizing: border-box;
+    outline: none;border: none;
     text-transform: capitalize;
+    text-decoration: none;
 }
+body{
+    overflow: hidden;
+}
+.container{
+    min-height: 100vh;
+    display: flex;align-items: center;justify-content: center;
+    background: url('https://cdn.pixabay.com/photo/2018/10/04/04/46/cat-3722915_960_720.jpg') no-repeat;
+    background-size: cover;background-position: center;
+    padding: 1.25rem;padding-bottom: 5rem;
+}
+.container .content{
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+.container .content .title{
+    font-size: 3.5rem;font-weight: bolder;
+    letter-spacing: 2px;
+    color: #008b00;
+    text-shadow: 0 .5rem 1rem #90ee90;
+}
+.container .content .description{
+    max-width: 600px;
+    font-size: 1rem;font-weight: bolder;
+    letter-spacing: 2px;
+    color: #8b0000;
+    text-shadow: 0 .3rem 1rem pink;
+    padding: 1rem 0;
+}
+.container .content .countdown{
+    display: flex;justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+.container .content .countdown .box h2{
+    font-size: 3rem;
+    background: rgba(0,139,0,.25); color: #8b0000;
+    width: 100px;
+    padding: .5rem;
+    border-radius: 1.5rem;
+    border: 3px solid rgba(0,139,0,.15);
+}
+.container .content .countdown .box p{
+    font-size: 1.25rem;font-weight: bold;
+    color: #999;
+    text-shadow: 0 .3rem 1rem #8b0000;
+}
+.container .content .btn{
+    display: inline-block;
+    padding: .5rem 2.5rem;margin-top: 1rem;
+    background: rgba(0,139,0,.25); color: #8b0000;
+    border-radius: 1.5rem;
+    border: 3px solid rgba(0,139,0,.15);
+    font-size: 1rem;
+    transition: .2s linear;
+}
+.container .content .btn:hover{
+    transform: scale(1.1);
+    color: #cff304;
+}
+
