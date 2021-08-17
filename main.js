@@ -14,28 +14,28 @@ function createFalls(){
 }
 setInterval(createFalls, 100);
 
-let countDate = new Date('oct 31, 2021 00:01').getTime();
+const countDate = new Date('oct 31, 2021 00:01').getTime(); 
 
-function countDown(){
-    let now = new Date().getTime();
-    gap = countDate - now;
+const timerFunction = setInterval(() =>{
 
-    let seconds = 1000;
-    let minutes = seconds * 60;
-    let hours = minutes * 60;
-    let days = hours * 24;
+    const currentDate = new Date().getTime();
+    const gap = countDate - currentDate;
 
-    let d = Math.floor(gap / (days));
-    let h = Math.floor((gap % (days)) / (hours));
-    let m = Math.floor((gap % (hours)) / (minutes));
-    let s = Math.floor((gap % (minutes)) / (seconds));
+    if(gap > 0) {
 
-    document.getElementById('days').innerText = d;
-    document.getElementById('hours').innerText = h;
-    document.getElementById('minutes').innerText = m;
-    document.getElementById('seconds').innerText = s;
+        const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((gap % (1000 * 60)) / (1000));
 
-}
-setInterval(function() {
-    countDown();
+        document.getElementById('days').innerHTML = days;
+        document.getElementById('hours').innerHTML = hours;
+        document.getElementById('minutes').innerHTML = minutes;
+        document.getElementById('seconds').innerHTML = seconds;
+    }else{
+        clearInterval(timerFunction);
+        document.getElementById('timer').innerHTML = "This is Halloween !";
+    }
 }, 1000);
+
+

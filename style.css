@@ -13,20 +13,20 @@ html{
 }
 body{
     overflow: hidden;
-}
-.container{
-    min-height: 100vh;width: 100%;
-    display: flex;align-items: center;justify-content: center;
     background: linear-gradient(115deg,rgba(255,255,255,.05),rgba(144,238,144,.15)),url('https://cdn.pixabay.com/photo/2018/10/04/04/46/cat-3722915_960_720.jpg') no-repeat;
     background-size: cover;background-position: center;
-    padding: 1.25rem;padding-bottom: 5rem;
+    padding: 1rem;
+    height: 100vh;
+    display: flex;align-items: center;justify-content: center;
+}
+.container{
+    text-align: center;
 }
 .container .content{
     background: rgba(255,255,255,.1);
-    padding: .5rem;
+    padding: 1.5rem;
     border-radius: 1.5rem;
     position: relative;
-    text-align: center;
     z-index: 1;
 }
 .container .content .title{
@@ -46,6 +46,7 @@ body{
 }
 .container .content .countdown{
     display: flex;justify-content: center;
+    flex-wrap: wrap;
     gap: 2.5rem;
     padding: 1rem 0;
 }
@@ -61,20 +62,9 @@ body{
     font-size: 1.25rem;font-weight: bold;
     color: #cff304;
     text-shadow: 0 0 1rem #d04000;
+    padding-top: 1.5rem;
 }
-.container .content .btn{
-    display: inline-block;
-    padding: .5rem 2.5rem;margin-top: 1rem;
-    background: rgba(0, 139, 0, 0.55); color: #cff304;
-    border-radius: 1.5rem;
-    border: 3px solid rgba(0,139,0,.15);
-    font-size: 1.25rem;
-    transition: .2s linear;
-}
-.container .content .btn:hover{
-    transform: scale(1.1);
-    color: rgb(10, 10, 10);
-}
+
 .container span{
     position: absolute;top: -3.5rem;
     border-radius: 50%;
@@ -92,6 +82,9 @@ body{
 @media only screen and (max-width:768px){
     html{
         font-size: 55%;
+    }
+    body{
+        margin-top: 30%;
     }
     .container{
         height: 100%;width: 100%;
